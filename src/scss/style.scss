@@ -1,17 +1,200 @@
 @import 'null.scss';
 
-// === Mixin ==
+// === MIXIN ===
 
-@mixin roboto() {
-    font-family: 'Roboto', sans-serif;
-}
 
-@mixin quicksand() {
-    font-family: 'Quicksand', sans-serif;
-}
+// === / MIXIN ===
 
-// === / Mixin ==
+// === VARIABLES ===
 
+$roboto: 'Roboto', sans-serif;
+$quiksand: 'Quicksand', sans-serif;
+$base: 4px;
+
+$padding-vertical: $base * 25;
+$padding-vertical-sm: $base * 15;
+
+$color-divider: #D8E3FE;
+$color-primary: #697CA6;
+$color-accent: #5E81FE;
+
+$fs-sm: 12px;
+$fs-md: 15px;
+
+// === / VARIABLES ===
+
+// === COMMON ===
 .body {
-    @include roboto;
+    font-family: $roboto;
 }
+
+.section {
+    padding: $padding-vertical 0px;
+    border-bottom: 1px solid $color-divider;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+    
+
+    &_wide {
+        max-width: 1200px;
+    }
+}
+
+.btn {
+    margin-left: $base * 11;
+    font-family: $quiksand;
+    padding: $base *4 - 2 $base * 5 - 2;
+    font-size: $fs-sm;
+    font-weight: 700;
+    transition: all .4s;
+    cursor: pointer;
+    border-radius: 2px;
+    line-height: 16px;
+    &_primary {
+        background-color: #D2E1FF;
+        color: #3A79FF;
+    }
+    &:hover {
+        background-color: darken(#D2E1FF, 10%);
+    }
+}
+// === / COMMON ===
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        width: $base * 6;
+        height: $base * 6;
+        border-radius: 50%;
+        background-color: $color-accent;
+        display: block;
+        margin-right: $base * 18;
+    }
+    
+    &__list {
+        display: flex;
+
+        
+    }
+    &__item {
+        & + & {
+            margin-left: $base * 10;
+        }
+    }
+    &__link {
+        font-size: $fs-sm;
+        font-weight: 500;
+        font-family: $quiksand;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: $color-primary;
+        line-height: (15 / 12) * 100%;
+        transition: all .4s ease-out 0ss;
+        &:hover { 
+            color: $color-accent;
+            font-weight: 700;
+        }
+        &._active {
+            color: $color-accent;
+            font-weight: 700; 
+        }
+    }
+    
+    &__socials {
+        margin-left: auto;
+    }
+
+    &__social-item {
+        & + & {
+            margin-left: $base * 8;
+        }
+        & path {
+            transition: all .4s;
+        }
+        &:hover path {
+            fill: $color-accent;
+        }
+    }
+
+    &__btn {
+        
+    }
+}
+// === / COMMON ===
+
+// === HEADER ===
+.header {
+    padding: 20px 0px;
+    &__container {
+        
+    }
+
+    
+}
+// === / HEADER ===
+
+// === HERO-IMAGE ===
+.hero-image {
+    background-color: #F4F7FF;
+}
+// === / HERO-IMAGE ===
+
+// === CUSTOMERS ===
+.customers {
+    padding: $padding-vertical-sm 0px;
+    &__container {
+        
+    }
+}
+// === / CUSTOMERS ===
+
+// === MANAGE ===
+// === / MANAGE ===
+
+// === FEATURES ===
+// === / FEATURES ===
+
+// === STATS ===
+// === / STATS ===
+
+// === BLOG ===
+// === / BLOG ===
+
+// === QUOTES ===
+// === / QUOTES ===
+
+// === GET-STARTED ===
+// === / GET-STARTED ===
+
+// === FAQ ===
+// === / FAQ ===
+
+// === NEWSLETTER ===
+// === / NEWSLETTER ===
+
+// === FOOTER ===
+.footer {
+    padding: $padding-vertical-sm 0px;
+    &__container {
+        
+    }
+
+    &__copyright {
+        font-family: $quiksand;
+        font-weight: 500;
+        font-size: $fs-sm;
+        line-height: 15px;
+        letter-spacing: 0.05em;
+        color: #AEB8D0;
+        margin-top: $base * 7;
+        margin-left: $base * 24;
+    }
+}
+// === / FOOTER ===
+
+

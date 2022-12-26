@@ -35,7 +35,6 @@ body {
     width: 100%;
     font-size: 100%;
     line-height: 1;
-    font-size: 14px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -63,7 +62,6 @@ button::-moz-focus-inner {
 a,
 a:visited {
     text-decoration: none;
-    color: inherit;
 }
 
 a:hover {
@@ -74,10 +72,6 @@ ul li {
     list-style: none;
 }
 
-a {
-    color: inherit;
-    font-family: inherit;
-}
 
 img {
     vertical-align: top;
